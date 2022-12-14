@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Navbar(){
 
     return (
-        <div style={{marginTop:"50px",padding:"10px"}} >
+        <div style={{marginTop:"50px",padding:"10px", marginBottom:"50px"}}  >
             <Box>
                 <HStack >
                     <Center>
@@ -23,8 +23,8 @@ export default function Navbar(){
                             
                             </Box>
 
-                            <Box boxSize={"30%"}>
-                                <Image src="https://ibb.co/wQ97g4X" alt="image" />
+                            <Box boxSize={"10%"} >
+                            <Image w="120px" src="https://i.ibb.co/0ChLk5K/Mail-logo.png" alt="Mail-logo" border="0" />
                             </Box>
 
                             <Box boxSize={"40%"}>
