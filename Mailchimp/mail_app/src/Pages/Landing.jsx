@@ -1,5 +1,6 @@
-import { Box, Button, Stack, Image,Text, Container } from "@chakra-ui/react";
+import { Box, Button, Stack, Image,Text, Container, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { AspectRatio } from '@chakra-ui/react'
 
 export default function Landing(){
     return (
@@ -85,6 +86,31 @@ export default function Landing(){
                             </Box>
                         </Box>
                 </Stack>
+            </Box>
+         
+            <Box boxSize={"100%"} mt="20px" bg="black" p="50px">
+                <Box >
+                     <AspectRatio  ml="300px" mt="20px" maxW='760px' ratio={1}>
+                        <iframe
+                            title='naruto'
+                            src='https://www.youtube.com/embed/QhBnZ6NPOY0'
+                            allowFullScreen
+                        
+                        />
+                    </AspectRatio>
+                    <Container ml="300px" color="white"  maxW='2xl' centerContent>
+                        <Box fontSize={"20px"}>
+                            Most email marketing platforms tell you how your campaigns perform. We analyze the data from the billions of 
+                            emails we send to give you personalized recommendations for improving your content, targeting, and automations.
+                
+                        </Box>
+                    </Container>
+                </Box>
+            </Box>
+
+            <Box boxSize={"100%"} p="100px">
+                <Heading>Find the right plan</Heading>
+                
             </Box>
         </div>
     )
