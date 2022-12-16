@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 export default function Footer(){
     return (
-        <Box>
+        <Box bg="#EFEEEA">
             <Box p="100px">
                 <Flex >
                     <Box className="box" textAlign={"left"} >
