@@ -2,10 +2,12 @@ import { Box, Button, Stack, Image,Text, Container, Heading, VStack,HStack,Flex,
 import { Link } from "react-router-dom";
 import { AspectRatio } from '@chakra-ui/react'
 import {CheckIcon, CloseIcon}  from "@chakra-ui/icons";
+import Navbar from "../Components/Navbar";
 
 export default function Landing(){
     return (
         <div>
+            <Navbar />
             <Box boxSize="100%">
                 <Stack direction={"row"} >
                         <Box boxSize={"25%"} >

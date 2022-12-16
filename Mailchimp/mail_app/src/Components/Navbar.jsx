@@ -50,8 +50,13 @@ export default function Navbar(){
                                         <option value="English">Italiano</option>
                                     </Select>
                                     <Image width="30px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEslS4lv5Ekyz-kyXUw-urto_6hx6haj8Iuw&usqp=CAU"/>
-                                    <Button  width="400px" borderRadius={"80px"}>Login</Button>
-                                    <Button bg={"gold"} width="400px" borderRadius={"80px"}>SignUp</Button>
+                                    
+                                        <Button  width="400px" borderRadius={"80px"}> 
+                                            <Link to="/login"> Login </Link>
+                                        </Button>
+                                        <Button  width="400px" bg="gold" borderRadius={"80px"}> 
+                                            <Link to="/signup"> Signup </Link>
+                                        </Button>
     
                                 </HStack>
 

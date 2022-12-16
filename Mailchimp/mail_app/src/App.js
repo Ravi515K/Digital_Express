@@ -1,15 +1,21 @@
 
 import './App.css';
+import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
 import Landing from './Pages/Landing';
+import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
+import AllRoutes from './Routes/AllRoutes';
 
 function App() {
   return (
     <div className="App">
-       {/* <Navbar/>
-       <Landing/> */}
-       <SignUp/>
+      {/* <AllRoutes /> */}
+        {/* <Navbar/> */}
+       {/* <Landing/>  */}
+       {/* <SignUp/> */}
+       {/* <Login /> */}
+       <Footer />
     </div>
   );
 }

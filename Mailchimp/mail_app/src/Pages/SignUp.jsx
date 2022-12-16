@@ -8,7 +8,7 @@ export default function SignUp(){
     const handleClick = ()=> {
             setState(!state)
     }
-    console.log(state)
+    //console.log(state)
     return (
         <Box  paddingLeft={"150px"} w="100%"> 
          <Flex>
@@ -36,7 +36,7 @@ export default function SignUp(){
                                 <FormLabel>Pasword </FormLabel>
                                 <FormLabel onClick={handleClick} color="teal">{state? <ViewIcon mr="10px" /> : <ViewOffIcon mr="10px" />}{state? "Show" : "Hide"}   </FormLabel>
                             </Flex>
-                            <Input w="500px" type='email' />
+                            <Input w="500px" type='password' />
                         </FormControl>
                         <Flex mt="20px" position={"relative"} >
                             <Checkbox position={"absolute"} top="5px"/>
@@ -66,4 +66,3 @@ export default function SignUp(){
         </Box>
     )
 }
-//https://i.ibb.co/kBN5kVL/Screenshot-148.png
