@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Image,Text, Container, Heading, VStack, ListItem, List,ListIcon,Center } from "@chakra-ui/react";
+import { Box, Button, Stack, Image,Text, Container, Heading, VStack,HStack,Flex, ListItem, List,ListIcon,Center, Grid, GridItem } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { AspectRatio } from '@chakra-ui/react'
 import {CheckIcon, CloseIcon}  from "@chakra-ui/icons";
@@ -319,7 +319,7 @@ export default function Landing(){
                                            <Text borderBottom="1px dotted black">A/B Testing</Text> 
                                         </ListItem>
                                         <hr />
-                                        <ListItem textAlign={"left"} display="flex">
+                                        <ListItem  textAlign={"left"} display="flex">
                                             <ListIcon as={CloseIcon} mr="15px" />
                                           <Text  borderBottom="1px dotted black" > Predictive Segmentation</Text>  
                                             
@@ -342,10 +342,136 @@ export default function Landing(){
                     </Stack>
                     <Center mt="50px">
                         <Link href="">
-                             <Button w="200px" h="50px" borderRadius={"50px"} bg="gold">See Plan Details</Button>
+                             <Button  w="200px" h="50px" borderRadius={"50px"} bg="gold">See Plan Details</Button>
                         </Link>
                         
                     </Center>
+                </Box>
+            </Box>
+
+            <Box mb="50px">
+                <Flex direction="row">
+                    <Box boxSize={"50%"} textAlign={"left"} p="50px" bg="#e7b75f" >
+                        <Container h="600px">
+                        <Heading mb="20px">Keep customers ready to buy with engaging content</Heading>
+
+                            <Text mb="10px">Content Optimizer</Text>
+                            <Box mb="20px">
+                                Learn how your emails compare to the top-performing campaigns
+                                in your industry and get data-driven suggestions for improving 
+                                your copy, imagery, and layout.
+                            </Box >
+                            <hr />
+                            <Text mt="20px" mb="10px">Creative Assistant</Text>
+                            <Box>
+                                Our Creative Assistant will help you stand out by using AI to create custom designs for your brand.
+                            </Box>
+                        </Container>
+                    </Box>
+                    <Box  boxSize="50%">
+                        <Image h="700px" w="full" src="https://eep.io/images/yzco4xsimv0y/33f3mgIWbzKjIpIRJi2f5v/6bd36bba38b7f6a94d587605ab9a7d75/Desktop_Feature_Cards_1_Automations.jpeg?w=1260&fm=webp&q=80"></Image>
+                    </Box>
+                </Flex>
+            </Box>
+
+
+            <Box id="last" p="50px">
+                <Box textAlign={"left"} w="600px" mb="20px" fontSize={"30px"}>
+                    <Heading> Bring in more data, drive more growth with our integrations</Heading>
+                </Box>
+                 <Box >
+                       <Grid templateColumns='repeat(3, 1fr)' gap={6}>
+                            <Link href="https://mailchimp.com/en-gb/integrations/canva/">
+                                <Box display={"flex"} padding="20px" >
+                                    <Image w="120px" src="https://eep.io/images/yzco4xsimv0y/egMxvwdsj41K5eESLhWBO/cf823adbd311e33919f97ffc5bf3181d/Canva.jpg?w=196&fm=webp&q=80" />
+                                    <Box textAlign={"left"} ml="20px">
+                                        <Heading fontSize={"20px"}>Canva</Heading>
+                                        <Text fontSize={"15px"} color="GrayText">Create compelling visuals from your marketing</Text>
+                                    </Box>
+                                </Box>
+                            </Link>
+
+                            <Link href="https://mailchimp.com/en-gb/integrations/mailchimp-for-salesforce/">
+                                <Box display={"flex"} padding="20px" >
+                                    <Image w="120px" src="https://eep.io/images/yzco4xsimv0y/51oq4AakIqo8fATlHgqHK0/02a750b1c1a16745296dca6fa7cb830c/Salesforce__1_.jpg?w=196&fm=webp&q=80" />
+                                    <Box textAlign={"left"} ml="20px">
+                                        <Heading fontSize={"20px"}>MailChimp for salesforce</Heading>
+                                        <Text fontSize={"15px"} color="GrayText">sync your mailchimp subscribers and salesforce leads across platforms </Text>
+                                    </Box>
+                                </Box>
+                            </Link>
+
+                            <Link href="https://mailchimp.com/en-gb/integrations/instagram-content-blocks/">
+                                <Box display={"flex"} padding="20px" >
+                                    <Image w="120px" src="https://eep.io/images/yzco4xsimv0y/67trWJLKtKcvrqlKYSlskE/696ad499e0cc60aa7392521a6a7cfd90/Instagram__1_.jpg?w=196&fm=webp&q=80" />
+                                    <Box textAlign={"left"} ml="20px">
+                                        <Heading fontSize={"20px"}>Instagram</Heading>
+                                        <Text fontSize={"15px"} color="GrayText">Pramote and share your Instagram posts in email campaigns </Text>
+                                    </Box>
+                                </Box>
+                            </Link>
+
+                            <Link href="https://mailchimp.com/en-gb/integrations/shopify/">
+                                <Box display={"flex"} padding="20px" >
+                                    <Image w="120px" src="https://eep.io/images/yzco4xsimv0y/44dW9Z4hibyDYi0qggfets/b01884985e996ffb5dc133556b92bb7a/Shopify__1_.jpg?w=196&fm=webp&q=80" />
+                                    <Box textAlign={"left"} ml="20px">
+                                        <Heading fontSize={"20px"}>Shopify</Heading>
+                                        <Text fontSize={"15px"} color="GrayText">Sync shopify customers,Products and Purchase to mailchomp </Text>
+                                    </Box>
+                                </Box>
+                            </Link>
+
+                            <Link href="https://mailchimp.com/en-gb/integrations/google-analytics/">
+                                <Box display={"flex"} padding="20px" >
+                                    <Image w="120px" src="https://eep.io/images/yzco4xsimv0y/7mpZ7UZrdzk2BmWX1OnRvb/5e610ecd21eeb25d0b82b098ce424e34/Google_Analytics2.jpg?w=196&fm=webp&q=80" />
+                                    <Box textAlign={"left"} ml="20px">
+                                        <Heading fontSize={"20px"}>Google Anaytics</Heading>
+                                        <Text fontSize={"15px"} color="GrayText">Unlock powerful insights with campaign, websites, or landing page data </Text>
+                                    </Box>
+                                </Box>
+                            </Link>
+
+                            <Link href="https://mailchimp.com/en-gb/integrations/woocommerce/">
+                                <Box display={"flex"} padding="20px" >
+                                    <Image w="120px" src="https://eep.io/images/yzco4xsimv0y/2uruOq31Y1FKdghFWn5zMg/8a35f3f9e463ba34038f3c3f16ccb635/WooCommerce.jpg?w=196&fm=webp&q=80" />
+                                    <Box textAlign={"left"} ml="20px">
+                                        <Heading fontSize={"20px"}>WooCommerce</Heading>
+                                        <Text fontSize={"15px"} color="GrayText">Power your Ecommerce store with smart </Text>
+                                    </Box>
+                                </Box>
+                            </Link>
+
+                            <Link href="https://mailchimp.com/en-gb/integrations/quickbooksonline/">
+                                <Box display={"flex"} padding="20px" >
+                                    <Image w="120px" src="https://eep.io/images/yzco4xsimv0y/uZVnrVt3DO1G4Ec5G4pvs/e6c9d3c2613827f7dd238f1c5e0b02d9/Quickbooks.jpg?w=196&fm=webp&q=80" />
+                                    <Box textAlign={"left"} ml="20px">
+                                        <Heading fontSize={"20px"}>Quickbooks online</Heading>
+                                        <Text fontSize={"15px"} color="GrayText">Bring together your marketing tools and invoice data </Text>
+                                    </Box>
+                                </Box>
+                            </Link>
+
+                            <Link href="https://mailchimp.com/en-gb/integrations/squarespace-commerce/">
+                                <Box display={"flex"} padding="20px" >
+                                    <Image w="120px" src="https://eep.io/images/yzco4xsimv0y/2klSrOoLZKmLuGKZjKT9o3/ca400f60c2f3673f3ab9b52f4d03360d/Squarespace.jpg?w=196&fm=webp&q=80" />
+                                    <Box textAlign={"left"} ml="20px">
+                                        <Heading fontSize={"20px"}>Squarespace Commerce</Heading>
+                                        <Text fontSize={"15px"} color="GrayText">Bring together your marketing tools and invoice data </Text>
+                                    </Box>
+                                </Box>
+                            </Link>
+
+                            <Link href="https://mailchimp.com/en-gb/integrations/zapier/">
+                                <Box display={"flex"} padding="20px" >
+                                    <Image w="120px" src="https://eep.io/images/yzco4xsimv0y/26deBkGp3A5Pj7suZ9oV7V/858e8a4603707166988a3282bca7e29b/Zapier.jpg?w=196&fm=webp&q=80" />
+                                    <Box textAlign={"left"} ml="20px">
+                                        <Heading fontSize={"20px"}>Campaire</Heading>
+                                        <Text fontSize={"15px"} color="GrayText"> Automatic pass the data between web services without a single line code </Text>
+                                    </Box>
+                                </Box>
+                            </Link>
+
+                       </Grid>
                 </Box>
             </Box>
              
