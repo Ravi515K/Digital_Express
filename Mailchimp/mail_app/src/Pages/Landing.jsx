@@ -95,19 +95,15 @@ export default function Landing(){
             <Box boxSize={"100%"} mt="20px" bg="black" p="50px">
                 <Box >
                      <AspectRatio  ml="300px" mt="20px" maxW='760px' ratio={1}>
-                        <iframe
-                          autoPlay
-                            title='naruto'
-                            src='https://www.youtube.com/embed/QhBnZ6NPOY0'
-                            
-                        
-                        />
+                     <iframe width="560" height="315" src="https://www.youtube.com/embed/5dLsDYC2g-A"
+                      title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen></iframe>
                     </AspectRatio>
                    
                     <Container ml="300px" color="white"  maxW='2xl' centerContent>
                         <Box fontSize={"20px"}>
-                            Most email marketing platforms tell you how your campaigns perform. We analyze the data from the billions of 
-                            emails we send to give you personalized recommendations for improving your content, targeting, and automations.
+                            You’re way more than a small business. And Mailchimp’s got more intelligent marketing tools, 
+                            guidance and inspiration to help you grow your brand, your following…even your confidence.
                 
                         </Box>
                     </Container>

@@ -2,8 +2,8 @@ import { Box, Heading, Text,Flex, Spacer, Container,Button,Image,Select, Link } 
 import {ArrowForwardIcon} from "@chakra-ui/icons"
 export default function Footer(){
     return (
-        <Box bgColor="#E7B75F"  h="1000px" >
-            <Box  mb="120px" p="80px">
+        <Box bgColor="#E7B75F"  h="900px" p="80px">
+            <Box  mb="120px">
                 <Flex >
                     <Box className="box" textAlign={"left"} >
                         <Heading fontSize={"20px"} mb="30px">Products</Heading>
@@ -49,7 +49,7 @@ export default function Footer(){
                         <Text borderBottom={"1px solid black"} mt="10px"><Link href="https://mailchimp.com/contact/?primaryTopic=prospective">Talk to Sales</Link></Text>
                     </Box>
                     <Spacer/>
-                    <Box w="250px" h="150px" border="1px solid black">
+                    <Box w="250px" h="150px" mb="20px">
                         <Box>
                         <Text mb="30px">
                             <Image src="https://eep.io/images/yzco4xsimv0y/73ZAoe8O3Y7SXQLeCNTq5u/8ddf1f63b4abdf7f67149d3a9d74a0bd/MCP.svg?w=260&fm=webp&q=80" />
@@ -77,7 +77,7 @@ export default function Footer(){
                 </Flex>
             </Box>  
             <hr />
-            <Box p="120px">
+            <Box mt="20px">
                 <Flex >
                     <Box >
                         <Flex>

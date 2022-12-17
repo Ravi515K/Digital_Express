@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "username": "json-server",
+      "password": "typicode",
+      "email": "asdr"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "json-server",
+      "password": "typicode",
+      "email": "abdr"
+    },
+    {
+      "email": "ravi@1234",
+      "password": "123",
+      "username": "afvg",
+      "id": 2
+    },
+    {
+      "email": "palvi123",
+      "password": "1234",
+      "username": "qwert",
+      "id": 3
+    }
+  ]
+}

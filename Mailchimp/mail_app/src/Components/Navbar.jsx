@@ -24,7 +24,9 @@ export default function Navbar(){
                             </Box>
 
                             <Box boxSize={"10%"} >
-                            <Image w="120px" src="https://i.ibb.co/0ChLk5K/Mail-logo.png" alt="Mail-logo" border="0" />
+                                 <Link to="/"> 
+                                     <Image w="120px" src="https://i.ibb.co/0ChLk5K/Mail-logo.png" alt="Mail-logo" border="0" />
+                                </Link> 
                             </Box>
 
                             <Box boxSize={"40%"}>
@@ -38,9 +40,9 @@ export default function Navbar(){
                                         </Flex>
                                     </Box>
                                     
-                                    <Box>
+                                    {/* <Box>
                                         <Image width="200px" src="https://www.freeiconspng.com/thumbs/world-icon-png/web-icon-black-png-planet-web-world-icon-17.png" />
-                                    </Box>
+                                    </Box> */}
                                     <Select>
                                         <option value="English">English</option>
                                         <option value="English">Espanol</option>
@@ -49,7 +51,7 @@ export default function Navbar(){
                                         <option value="English">Dutsch</option>
                                         <option value="English">Italiano</option>
                                     </Select>
-                                    <Image width="30px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEslS4lv5Ekyz-kyXUw-urto_6hx6haj8Iuw&usqp=CAU"/>
+                                       {/* <Image width="30px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEslS4lv5Ekyz-kyXUw-urto_6hx6haj8Iuw&usqp=CAU"/> */}
                                     
                                         <Button  width="400px" borderRadius={"80px"}> 
                                             <Link to="/login"> Login </Link>
@@ -72,7 +74,9 @@ export default function Navbar(){
                             brand* that recommends ways to get more opens, clicks, and sales.
                     </Container>
                     <Center>
-                    <Button width="200px" bg="gold" borderRadius={"70px"}>Sign Up</Button>
+                        <Link to="/signup">
+                            <Button width="200px" bg="gold" borderRadius={"70px"}>Sign Up</Button>
+                         </Link>
                     </Center>
                 </VStack>
             </Box>
