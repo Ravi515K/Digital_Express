@@ -10,12 +10,12 @@ import AllRoutes from './Routes/AllRoutes';
 function App() {
   return (
     <div className="App">
-      {/* <AllRoutes /> */}
+      <AllRoutes />
         {/* <Navbar/> */}
        {/* <Landing/>  */}
        {/* <SignUp/> */}
        {/* <Login /> */}
-       <Footer />
+       {/* <Footer /> */}
     </div>
   );
 }

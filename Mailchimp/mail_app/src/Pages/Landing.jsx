@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AspectRatio } from '@chakra-ui/react'
 import {CheckIcon, CloseIcon}  from "@chakra-ui/icons";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 export default function Landing(){
     return (
@@ -476,6 +477,7 @@ export default function Landing(){
                        </Grid>
                 </Box>
             </Box>
+            <Footer />
              
         </div>
     )
