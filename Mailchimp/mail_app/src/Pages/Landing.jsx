@@ -6,10 +6,27 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 export default function Landing(){
+    
     return (
         <div>
-            <Navbar />
-            <Box boxSize="100%">
+            <Navbar/>
+
+            <Box mb="50px">
+                <VStack>
+                    <Heading>Turns Emails into Revenue</Heading>
+                    <Container maxW='750px'fontSize={"20px"}>
+                        Win new customers with the #1 email marketing and automations
+                            brand* that recommends ways to get more opens, clicks, and sales.
+                    </Container>
+                    <Center>
+                        <Link to="/signup">
+                            <Button width="200px" bg="gold" borderRadius={"70px"}>Sign Up</Button>
+                         </Link>
+                    </Center>
+                </VStack>
+            </Box>
+
+             <Box boxSize="100%">
                 <Stack direction={"row"} >
                         <Box boxSize={"25%"} >
                              <Box position={"relative"}>

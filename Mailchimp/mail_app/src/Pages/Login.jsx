@@ -65,7 +65,7 @@ export default function Login(){
                 <Flex>
                     <Box w="40%">
                         <Box>
-                            <Image w="100px" pl="20px" pt="20px" src="https://i.ibb.co/0ChLk5K/Mail-logo.png"/>
+                            <Image w="100px" pl="20px" pt="20px" src="https://i.ibb.co/mqdNLMd/Digi-Express.png"/>
                         </Box>
                         <Box paddingTop="50px" pl={"20px"} w="60%" >
                             <Flex>

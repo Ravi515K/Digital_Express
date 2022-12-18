@@ -1,31 +1,36 @@
-import { Box, Button, Center, Flex, Heading, HStack,Image,Select,Text,VStack, Container
-    
+import { Box, Button, Center, Flex, Heading, HStack,Image,Select,
+    Text,VStack, Container, Drawer
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+
+import {Link} from "react-router-dom"
+import Inspiration from "../Pages/Inspiration";
+import Products from "../Pages/Products";
+import Resources from "../Pages/Resources";
 
 
 export default function Navbar(){
-
+ 
     return (
-        <div style={{marginTop:"50px",padding:"10px", marginBottom:"50px"}}  >
-            <Box>
+        
+        <Box mb="50px" className="main">
+            <Box  p="50px" >
                 <HStack >
                     <Center>
 
                             <Box boxSize={"40%"}>
                                 
                                 <HStack spacing={"20px"}>
-                                    <Heading as="h5" fontSize={"15px"}>Products</Heading>
-                                    <Heading as="h5" fontSize={"15px"}>Resources</Heading>
-                                    <Heading as="h5" fontSize={"15px"}>Inspiration</Heading>
-                                    <Heading as="h5" fontSize={"15px"}>Pricing</Heading>
+                                    <Products />
+                                    <Resources />
+                                    <Inspiration />
+                                    <Heading as="h5" fontSize={"20px"}>Pricing</Heading>
                                 </HStack>
                             
                             </Box>
 
                             <Box boxSize={"10%"} >
                                  <Link to="/"> 
-                                     <Image w="120px" src="https://i.ibb.co/0ChLk5K/Mail-logo.png" alt="Mail-logo" border="0" />
+                                     <Image w="120px" src="https://i.ibb.co/mqdNLMd/Digi-Express.png" alt="Mail-logo" border="0" />
                                 </Link> 
                             </Box>
 
@@ -40,9 +45,6 @@ export default function Navbar(){
                                         </Flex>
                                     </Box>
                                     
-                                    {/* <Box>
-                                        <Image width="200px" src="https://www.freeiconspng.com/thumbs/world-icon-png/web-icon-black-png-planet-web-world-icon-17.png" />
-                                    </Box> */}
                                     <Select>
                                         <option value="English">English</option>
                                         <option value="English">Espanol</option>
@@ -51,7 +53,6 @@ export default function Navbar(){
                                         <option value="English">Dutsch</option>
                                         <option value="English">Italiano</option>
                                     </Select>
-                                       {/* <Image width="30px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEslS4lv5Ekyz-kyXUw-urto_6hx6haj8Iuw&usqp=CAU"/> */}
                                     
                                         <Button  width="400px" borderRadius={"80px"}> 
                                             <Link to="/login"> Login </Link>
@@ -65,23 +66,8 @@ export default function Navbar(){
                             </Box>
                     </Center>
                 </HStack>
-            </Box>
-            <Box mt="70px">
-                <VStack>
-                    <Heading>Turns Emails into Revenue</Heading>
-                    <Container maxW='750px'fontSize={"20px"}>
-                        Win new customers with the #1 email marketing and automations
-                            brand* that recommends ways to get more opens, clicks, and sales.
-                    </Container>
-                    <Center>
-                        <Link to="/signup">
-                            <Button width="200px" bg="gold" borderRadius={"70px"}>Sign Up</Button>
-                         </Link>
-                    </Center>
-                </VStack>
-            </Box>
-            
-            
-        </div>
+            </Box> 
+        </Box>
     )
 }
+

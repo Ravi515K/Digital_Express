@@ -86,7 +86,7 @@ export default function SignUp(){
          <Flex>
 
          
-          <Image mt="20px"  w="100px" h="100px" src="https://i.ibb.co/0ChLk5K/Mail-logo.png"/>
+          <Image mt="30px" mr="40px" w="100px" h="100px" src="https://i.ibb.co/mqdNLMd/Digi-Express.png"/>
           <Box paddingTop="50px" pl={"20px"} w="60%" >
             <Flex>
                 <Box boxSize={"500px"}>
