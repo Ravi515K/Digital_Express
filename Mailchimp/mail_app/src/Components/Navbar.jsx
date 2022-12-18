@@ -1,5 +1,5 @@
 import { Box, Button, Center, Flex, Heading, HStack,Image,Select,
-    Text,VStack, Container, Drawer
+    Text,VStack, Container, Drawer, Grid
 } from "@chakra-ui/react";
 
 import {Link} from "react-router-dom"
@@ -13,8 +13,8 @@ export default function Navbar(){
     return (
         
         <Box mb="50px" className="main">
-            <Box  p="50px" >
-                <HStack >
+            <Grid  p="50px" w="100%" margin={"auto"} justifyContent="center" templateColumns="repeat(3,1fr)">
+                {/* <HStack > */}
                     <Center>
 
                             <Box boxSize={"40%"}>
@@ -65,8 +65,8 @@ export default function Navbar(){
 
                             </Box>
                     </Center>
-                </HStack>
-            </Box> 
+                {/* </HStack> */}
+            </Grid> 
         </Box>
     )
 }

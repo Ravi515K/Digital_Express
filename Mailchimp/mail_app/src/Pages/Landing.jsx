@@ -4,14 +4,14 @@ import { AspectRatio } from '@chakra-ui/react'
 import {CheckIcon, CloseIcon}  from "@chakra-ui/icons";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-
+import "../landing.css"
 export default function Landing(){
     
     return (
-        <div>
+        < >
             <Navbar/>
 
-            <Box mb="50px">
+            <Box mb="50px" margin={"auto"}>
                 <VStack>
                     <Heading>Turns Emails into Revenue</Heading>
                     <Container maxW='750px'fontSize={"20px"}>
@@ -26,9 +26,9 @@ export default function Landing(){
                 </VStack>
             </Box>
 
-             <Box boxSize="100%">
-                <Stack direction={"row"} >
-                        <Box boxSize={"25%"} >
+             <Grid id="imgBox" w="100%" margin={"auto"} justifyContent="center" templateColumns="repeat(4,1fr)" mt="50px">
+                {/* <Stack direction={"row"} > */}
+                        <Box >
                              <Box position={"relative"}>
                                 <Link href="https://mailchimp.com/automations/"> 
                                     <Text position={"absolute"} top="20px" ml={"50px"}> <b>Convert With Automations</b> </Text> 
@@ -47,7 +47,7 @@ export default function Landing(){
                                 
                             </Box>
                         </Box>
-                        <Box boxSize={"25%"}>
+                        <Box >
                             <Box position={"relative"}>
                             <Link href="https://mailchimp.com/features/content-optimizer/"> 
                              <Text position={"absolute"} top="20px" ml={"50px"}> <b>Optimize With AI and Analytics</b> </Text> 
@@ -67,7 +67,7 @@ export default function Landing(){
                                 
                             </Box>
                         </Box>
-                        <Box boxSize={"25%"}>
+                        <Box >
 
                             <Box position={"relative"}>
                                 <Link href=""> 
@@ -87,7 +87,7 @@ export default function Landing(){
                                 
                             </Box>
                         </Box>
-                        <Box boxSize={"25%"}>
+                        <Box >
                         <Box position={"relative"}>
                                 <Link href=""> 
                                     <Text position={"absolute"} top="20px" ml={"80px"}> <b>Sync With INtegration</b> </Text> 
@@ -106,8 +106,8 @@ export default function Landing(){
                                 
                             </Box>
                         </Box>
-                </Stack>
-            </Box>
+                {/* </Stack> */}
+            </Grid>
          
             <Box boxSize={"100%"} mt="20px" bg="black" p="50px">
                 <Box >
@@ -131,6 +131,8 @@ export default function Landing(){
                 <Heading>Find the right plan</Heading>
                 <Box height={"auto"} mt="50px">
                     <Stack direction="horizontal">
+                      
+                      
                         <Box boxShadow={"2xl"} width={"350px"} border={"1px solid grey"} padding="10px" >
                             <Text textAlign={"left"} fontSize={"25px"}>Premium</Text>
                             <Container >
@@ -357,7 +359,7 @@ export default function Landing(){
 
                     </Stack>
                     <Center mt="50px">
-                        <Link href="">
+                        <Link to="/marketing">
                              <Button  w="200px" h="50px" borderRadius={"50px"} bg="gold">See Plan Details</Button>
                         </Link>
                         
@@ -492,6 +494,6 @@ export default function Landing(){
             </Box>
             <Footer />
              
-        </div>
+        </>
     )
 }

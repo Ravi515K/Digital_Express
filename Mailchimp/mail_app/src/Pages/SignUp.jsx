@@ -47,7 +47,7 @@ export default function SignUp(){
                     } 
                   case "USER_SIGNUP":
                     if(state.email && state.password && state.username){
-                        console.log(state.email)
+                       // console.log(state.email)
                         return  fetch("http://localhost:8080/users",{
                             method:"post",
                             headers:{
