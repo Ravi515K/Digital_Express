@@ -9,7 +9,8 @@ export default function Login(){
        let loginData={
             email:"",
             password:"",
-            showpassword:false
+            showpassword:false,
+            error:false
        }
 
     
@@ -19,35 +20,65 @@ export default function Login(){
                     case "SET_EMAIL":
                         return {
                             ...state,
-                            email:payload
+                            email:payload,
+                            error:false,
                         }
                     case "SET_PASS":
                         return {
                             ...state,
-                            password:payload
+                            password:payload,
+                            error:false,
                         } 
                     case "SHOW_PASSWORD":
                         return {
                             ...state,
-                            showpassword:!state.showpassword
+                            showpassword:!state.showpassword,
+                            error:false,
                         } 
                     case "USER_LOGIN"  : 
                     if(state.email && state.password){
                         return fetch('http://localhost:8080/users')
                         .then((res)=>res.json())
                         .then(res=>{
-                          
-                           let obj= res.find((el)=>{
-                                return el.email==state.email    
-                            })
-                            if(obj&&obj.password==state.password){
-                                sessionStorage.setItem("userData",JSON.stringify(obj))
-                                navigate("/")
-                            }
+                          let obj;
+                            obj=res.map((el)=>{
+                                let flag=false
+                                for(let i=0;i<res.length;i++){
+                                        if(el.email==state.email&&el.password==state.password){
+                                            sessionStorage.setItem("userData",JSON.stringify(obj))
+                                                     navigate("/")
+                                                     flag=true;
+                                        }
+                                }
+                                if(flag==false){
+                                    return{
+                                        ...state,
+                                        error:true
+                                    }
+                                }
+
+                        })
+                        //    let obj= res.find((el)=>{
+                        //         return el.email==state.email    
+                                       
+                        //     })
+                        //     console.log(obj)
+                        //     if(obj&&obj.password==state.password){
+                        //         sessionStorage.setItem("userData",JSON.stringify(obj))
+                        //         navigate("/")
+                        //     }
+                        //     else if(!obj || obj.password!=state.password){
+                        //       return  {
+                        //         ...state,
+                        //             error:true
+                        //         }
+                        //     }
+                            
                             // console.log(obj)
                             
                         })
                     }
+                    
                       
                     default :
                         return  {...state}    
@@ -67,6 +98,9 @@ export default function Login(){
                         <Box>
                             <Image w="100px" pl="20px" pt="20px" src="https://i.ibb.co/mqdNLMd/Digi-Express.png"/>
                         </Box>
+                        {
+                            state.error && <Text>Email or Passwor are Invalid</Text> 
+                        }
                         <Box paddingTop="50px" pl={"20px"} w="60%" >
                             <Flex>
                                 <Box boxSize={"500px"}>
