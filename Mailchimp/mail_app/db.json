@@ -25,6 +25,24 @@
       "password": "1234",
       "username": "qwert",
       "id": 3
+    },
+    {
+      "email": "ganesh@123",
+      "password": "123",
+      "username": "ganya",
+      "id": 4
+    },
+    {
+      "email": "sawan@123",
+      "password": "1234",
+      "username": "sawan",
+      "id": 5
+    },
+    {
+      "email": "mahesh@123",
+      "password": "123",
+      "username": "ahesh",
+      "id": 6
     }
   ]
 }

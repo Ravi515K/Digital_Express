@@ -40,39 +40,39 @@ export default function Login(){
                         return fetch('http://localhost:8080/users')
                         .then((res)=>res.json())
                         .then(res=>{
-                          let obj;
-                            obj=res.map((el)=>{
-                                let flag=false
-                                for(let i=0;i<res.length;i++){
-                                        if(el.email==state.email&&el.password==state.password){
-                                            sessionStorage.setItem("userData",JSON.stringify(obj))
-                                                     navigate("/")
-                                                     flag=true;
-                                        }
-                                }
-                                if(flag==false){
-                                    return{
-                                        ...state,
-                                        error:true
-                                    }
-                                }
-
-                        })
-                        //    let obj= res.find((el)=>{
-                        //         return el.email==state.email    
-                                       
-                        //     })
-                        //     console.log(obj)
-                        //     if(obj&&obj.password==state.password){
-                        //         sessionStorage.setItem("userData",JSON.stringify(obj))
-                        //         navigate("/")
-                        //     }
-                        //     else if(!obj || obj.password!=state.password){
-                        //       return  {
-                        //         ...state,
-                        //             error:true
+                        //   let obj;
+                        //     obj=res.map((el)=>{
+                        //         let flag=false
+                        //         for(let i=0;i<res.length;i++){
+                        //                 if(el.email==state.email&&el.password==state.password){
+                        //                     sessionStorage.setItem("userData",JSON.stringify(obj))
+                        //                              navigate("/")
+                        //                              flag=true;
+                        //                 }
                         //         }
-                        //     }
+                        //         if(flag==false){
+                        //             return{
+                        //                 ...state,
+                        //                 error:true
+                        //             }
+                        //         }
+
+                        // })
+                           let obj= res.find((el)=>{
+                                return el.email==state.email    
+                                       
+                            })
+                            console.log(obj)
+                            if(obj&&obj.password==state.password){
+                                sessionStorage.setItem("userData",JSON.stringify(obj))
+                                navigate("/")
+                            }
+                            else if(obj==undefined){
+                              return  {
+                                ...state,
+                                    error:true
+                                }
+                            }
                             
                             // console.log(obj)
                             
@@ -98,9 +98,7 @@ export default function Login(){
                         <Box>
                             <Image w="100px" pl="20px" pt="20px" src="https://i.ibb.co/mqdNLMd/Digi-Express.png"/>
                         </Box>
-                        {
-                            state.error && <Text>Email or Passwor are Invalid</Text> 
-                        }
+                        
                         <Box paddingTop="50px" pl={"20px"} w="60%" >
                             <Flex>
                                 <Box boxSize={"500px"}>
@@ -110,7 +108,10 @@ export default function Login(){
                                             <Text fontSize="20px"> Need a Mailchimp account?</Text> <Text color="teal" borderBottom={"1px solid teal"} fontSize={"20px"}><Link href="/signup" >Create an account</Link> </Text>
                                         </Flex>
                                     </Box>
-                                    <Box textAlign={"left"}>
+                                    {
+                                        state.error && <Text color="red">Email or Password are Invalid</Text> 
+                                    }
+                                                <Box textAlign={"left"}>
                                         <FormControl>
                                             <FormLabel>Username or  Email</FormLabel>
                                                 <Input w="500px" type='email'  value ={state.email} onChange={(e)=>dispatch({type:"SET_EMAIL",payload:e.target.value})}/>

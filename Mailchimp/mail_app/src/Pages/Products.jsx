@@ -1,5 +1,5 @@
-import { Box,Flex,Spacer,Text, useDisclosure,Button, Heading } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Box,Flex,Spacer,Text, useDisclosure,Button, Heading,Link } from "@chakra-ui/react";
+// import { Link } from "react-router-dom";
 import {CloseIcon} from "@chakra-ui/icons"
 import {
     Drawer,
@@ -43,8 +43,8 @@ import {
                     <Text fontSize={"15px"} textAlign="left" mb="30px" color={"GrayText"}>WE'LL HELP YOU ---</Text>
                     
                     <Box fontSize={"25px"} textAlign="left" mb="30px">
-                        <Text mb="30px" ><Link to={"https://mailchimp.com/en-gb/get-your-business-online/"}>Get Your Business Online</Link></Text>
-                        <Text mb="30px"><Link to={"https://mailchimp.com/en-gb/marketing-platform/"}>Market Your Business</Link></Text>
+                        <Text mb="30px" ><Link href={"https://mailchimp.com/en-gb/get-your-business-online/"}>Get Your Business Online</Link></Text>
+                        <Text mb="30px"><Link href={"https://mailchimp.com/en-gb/marketing-platform/"}>Market Your Business</Link></Text>
                     </Box>
                    
                     <hr style={{height:"5px"} }/>
@@ -52,10 +52,10 @@ import {
                     <Text fontSize={"15px"} textAlign="left" mb="30px" color={"GrayText"} mt="30px">PLATFORM FEATURES  ---</Text>
                     
                     <Box fontSize={"25px"} textAlign="left">
-                        <Text mb="30px" ><Link to={"https://mailchimp.com/en-gb/audience/"}>Audience Management</Link></Text>
-                        <Text mb="30px"><Link to={"https://mailchimp.com/en-gb/create-content/"}>Creative Tools</Link></Text>
-                        <Text mb="30px" ><Link to={"https://mailchimp.com/en-gb/automations/"}>Marketing Automation</Link></Text>
-                        <Text mb="30px"><Link to={"https://mailchimp.com/en-gb/insights/"}>Insights & Analytics</Link></Text>
+                        <Text mb="30px" ><Link href={"https://mailchimp.com/en-gb/audience/"}>Audience Management</Link></Text>
+                        <Text mb="30px"><Link href={"https://mailchimp.com/en-gb/create-content/"}>Creative Tools</Link></Text>
+                        <Text mb="30px" ><Link href={"https://mailchimp.com/en-gb/automations/"}>Marketing Automation</Link></Text>
+                        <Text mb="30px"><Link href={"https://mailchimp.com/en-gb/insights/"}>Insights & Analytics</Link></Text>
                     </Box>
                 
                 </Box>
