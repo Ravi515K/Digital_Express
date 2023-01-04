@@ -23,7 +23,7 @@ export default function Navbar(){
                                     <Products />
                                     <Resources />
                                     <Inspiration />
-                                    <Heading as="h5" fontSize={"20px"}>Pricing</Heading>
+                                   <Link to="/marketing"><Heading as="h5" fontSize={"20px"}>Pricing</Heading></Link> 
                                 </HStack>
                             
                             </Box>

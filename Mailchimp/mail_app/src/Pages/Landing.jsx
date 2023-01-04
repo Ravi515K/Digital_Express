@@ -114,7 +114,7 @@ export default function Landing(){
                      <AspectRatio  ml="300px" mt="20px" maxW='760px' ratio={1}>
                      <iframe width="560" height="315" src="https://www.youtube.com/embed/5dLsDYC2g-A"
                       title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                      allowfullscreen></iframe>
+                      allowFullScreen></iframe>
                     </AspectRatio>
                    
                     <Container ml="300px" color="white"  maxW='2xl' centerContent>

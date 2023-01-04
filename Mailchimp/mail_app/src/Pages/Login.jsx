@@ -67,14 +67,14 @@ export default function Login(){
                                 sessionStorage.setItem("userData",JSON.stringify(obj))
                                 navigate("/")
                             }
-                            else if(obj==undefined){
+                            else if(obj==undefined || obj.password!=state.password){
                               return  {
                                 ...state,
                                     error:true
                                 }
                             }
                             
-                            // console.log(obj)
+                             console.log(state.error)
                             
                         })
                     }

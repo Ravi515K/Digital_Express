@@ -43,6 +43,30 @@
       "password": "123",
       "username": "ahesh",
       "id": 6
+    },
+    {
+      "email": "revati@123",
+      "password": "123",
+      "username": "ppp0987",
+      "id": 7
+    },
+    {
+      "email": "sawan@123",
+      "password": "123",
+      "username": "ppp0242",
+      "id": 8
+    },
+    {
+      "email": "sawan@123",
+      "password": "456",
+      "username": "456",
+      "id": 9
+    },
+    {
+      "email": "sawan@123",
+      "password": "1234",
+      "username": "sawan@123",
+      "id": 10
     }
   ]
 }
